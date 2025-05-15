@@ -32,7 +32,7 @@ const SignupPage = () => {
 
     try {
       const { data } = await axios.post(
-        "https://skymoment.onrender.com/api/v1/user/signup",
+        "http://localhost:8080/api/v1/user/signup",
         {
           firstname: formData.firstName,
           lastname: formData.lastName, 

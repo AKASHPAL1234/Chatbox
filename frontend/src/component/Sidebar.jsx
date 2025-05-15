@@ -15,7 +15,7 @@ function Sidebar() {
   const handleLogout = async () => {
     try {
       const { data } = await axios.get(
-        "https://skymoment.onrender.com/api/v1/user/logout",
+        "http://localhost:8080/api/v1/",
         { withCredentials: true }
       );
       localStorage.removeItem("user");
