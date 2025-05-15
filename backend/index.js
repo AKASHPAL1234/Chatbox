@@ -33,7 +33,7 @@ mongoose.connect(Mongo_url).then(()=>{
 })
 
 
-app.use("api/v1/user",userRoutes);
+app.use("/api/v1/user",userRoutes);
 app.use("api/v1/skymoment",promtRoutes);
 
 

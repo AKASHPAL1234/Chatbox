@@ -15,9 +15,10 @@ function Sidebar() {
   const handleLogout = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:8080/api/v1/",
+        "http://localhost:8080/api/v1/user/logout",
         { withCredentials: true }
       );
+     
       localStorage.removeItem("user");
       localStorage.removeItem("token");
       setAuthuser(null);
