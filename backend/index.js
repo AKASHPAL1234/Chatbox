@@ -33,8 +33,8 @@ mongoose.connect(Mongo_url).then(()=>{
 })
 
 
-app.use("/api/v1/user",userRoutes);
-app.use("/api/v1/skymoment",promtRoutes);
+app.use("https://skymomentai.onrender.com/api/v1/user",userRoutes);
+app.use("https://skymomentai.onrender.com/api/v1/skymoment",promtRoutes);
 
 
 
