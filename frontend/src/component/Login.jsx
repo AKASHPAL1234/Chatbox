@@ -31,7 +31,7 @@ const LoginPage = () => {
 
     try {
       const { data } = await axios.post(
-        "https://skymoment.onrender.com/user/login",
+        "https://skymoment.onrender.com/api/v1/user/login",
         {
           email: formData.email,
           password: formData.password,
