@@ -2,6 +2,8 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/Authprovider";
+import { BASEURL } from "../config/utild";
+
 
 const LoginPage = () => {
   const [formData, setFormData] = useState({
@@ -31,7 +33,8 @@ const LoginPage = () => {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:8080/api/v1/user/login",
+        // "http://localhost:8080/api/v1/user/login",
+        `${BASEURL}/user/login`,
         {
           email: formData.email,
           password: formData.password,

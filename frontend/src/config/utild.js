@@ -1,0 +1,1 @@
+export const BASEURL="https://skymoment.onrender.com/api/v1"

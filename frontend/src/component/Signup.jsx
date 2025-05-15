@@ -2,6 +2,7 @@ import { Eye } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
+import { BASEURL } from "../config/utild";
 
 const SignupPage = () => {
   const [formData, setFormData] = useState({
@@ -32,7 +33,7 @@ const SignupPage = () => {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:8080/api/v1/user/signup",
+        `${BASEURL}/user/signup`,
         {
           firstname: formData.firstName,
           lastname: formData.lastName, 
