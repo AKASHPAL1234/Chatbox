@@ -10,13 +10,13 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path='/' element={authuser?<Home/>:<Navigate to={"/login"}/>}/>
+        {/* <Route path='/' element={authuser?<Home/>:<Navigate to={"/login"}/>}/>*/}
          <Route path='/signup' element={authuser?<Navigate to={"/"}/>:<Signup/>}/>
-          <Route path='/login' element={authuser?<Navigate to={"/"}/>:<Login/>}/>
+          <Route path='/login' element={authuser?<Navigate to={"/"}/>:<Login/>}/> 
 
-          {/* <Route path='/' element={<Home/>}/>
-         <Route path='/signup' element={<Signup/>}/>
-          <Route path='/login' element={<Login/>}/> */}
+           <Route path='/' element={<Home/>}/>
+         {/* <Route path='/signup' element={<Signup/>}/>
+          <Route path='/login' element={<Login/>}/>  */}
       </Routes>
 
 
