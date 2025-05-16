@@ -76,16 +76,16 @@ function Sidebar() {
               alt="profile"
               className="rounded-full w-8 h-8"
             />
-            <span>{user ? user.firstname : "My profile"}</span>
+            <span>{user ? user.firstname : "Akash Pal"}</span>
           </div>
           <div className="text-center mt-2">
-            <button
+            {/* <button
               onClick={handleLogout}
               className="text-white text-lg flex mx-auto items-center gap-2"
             >
               <LogOut />
               Logout
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
