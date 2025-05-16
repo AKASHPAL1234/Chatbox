@@ -3,9 +3,10 @@ import { useState } from "react";
 import logo from "../assets/2.png";
 import { LogOut, X, Menu } from "lucide-react";
 import { useAuth } from "../context/Authprovider";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { BASEURL } from "../config/utild";
+import SignupPage from "./Signup";
 
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -78,15 +79,16 @@ function Sidebar() {
             />
             <span>{user ? user.firstname : "Akash Pal"}</span>
           </div>
+          <Link to="<SignupPage />">
           <div className="text-center mt-2">
-            {/* <button
+             <button
               onClick={handleLogout}
               className="text-white text-lg flex mx-auto items-center gap-2"
             >
-              <LogOut />
-              Logout
-            </button> */}
+              signup
+            </button> 
           </div>
+          </Link>
         </div>
       </div>
     </>
