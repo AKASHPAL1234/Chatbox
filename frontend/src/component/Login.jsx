@@ -33,11 +33,11 @@ const LoginPage = () => {
 
     try {
       const { data } = await axios.post(
-        // "http://localhost:8080/api/v1/user/login",
-        `${BASEURL}/user/login`,
+        "http://localhost:8080/api/v1/user/login",
+        // `${BASEURL}/user/login`,
         {
           email: formData.email,
-          password: formData.password,
+          password:formData.password,
         },
         {
           withCredentials: true,

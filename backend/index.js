@@ -12,16 +12,16 @@ const app = express();
 dotenv.config();
 const port = process.env.PORT || 3000;
 const Mongo_url = process.env.MONGO_URL;
+
+app.use(cors({
+  origin: 'http://localhost:5173', // Your frontend origin
+  credentials: true               // Allow credentials (cookies, etc.)
+}));
 app.use(express.json());
 app.use(cookieparser());
 
 
-app.use(cors({
-  origin: process.env.FRONTEND_URL, // .trim() ensures no trailing slash
-  credentials: true,
-  methods: ["POST", "GET", "PUT", "DELETE"],
-  allowedHeaders: ["Content-Type", "Authorization"]
-}));
+
 
 
 
