@@ -79,10 +79,11 @@ function Sidebar() {
             />
             <span>{user ? user.firstname : "Akash Pal"}</span>
           </div>
-          <Link to="<SignupPage />">
+          <Link to="/signup">
+
           <div className="text-center mt-2">
              <button
-              onClick={handleLogout}
+             
               className="text-white text-lg flex mx-auto items-center gap-2"
             >
               signup
