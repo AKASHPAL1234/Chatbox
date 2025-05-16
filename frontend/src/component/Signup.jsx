@@ -1,6 +1,6 @@
 import { Eye } from "lucide-react";
 import { useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from "axios";
 import { BASEURL } from "../config/utild";
 
@@ -110,9 +110,11 @@ const SignupPage = () => {
         </form>
         <p className="text-center text-white mt-4 text-sm">
           Already have an account?
-          <a href="/login" className="text-purple-300 hover:underline">
+          <Link to="/login">
+          <p href="/login" className="text-purple-300 hover:underline">
             Login
-          </a>
+          </p>
+          </Link>
         </p>
       </div>
     </div>
